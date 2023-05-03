@@ -1,0 +1,67 @@
+<!DOCTYPE>
+{% load static %}
+<html >
+<head>
+	<title>My blog</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+<style>
+	.overflow-ellipsis { text-decoration: none;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+ 	-webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+    width: 700px;
+    height: 40px; }
+
+</style>
+</head>
+<body>
+<div class="shell">
+	<div class="border">
+		<div id="navigation">
+			<ul>
+			    <li><a href="/" class="active">Home</a></li>
+			    <li><a href="/admin">Admin</a></li>
+			    
+			</ul>
+		</div>
+		<div id="main">
+			<div id="content" class="left">
+				
+				<div class="projects">
+					<h3>NEWS</h3>
+					{% for post in post_list %}
+					<div class="item">
+						<div class="image left">
+							<img src="{{ post.img.url }}" width="200px" />
+						</div>
+						<div class="text left">
+							<h4><a href="{{ post.id }}"> {{ post.title }}</a></h4>
+							<p class="overflow-ellipsis">
+								{{ post.description }}
+							</p>
+							<br>
+							<p>Author: {{ post.author }}</p>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		
+
+	</div>
+	
+	<div id="footer">
+		<p class="copy right">By Siarhei Burdzeika &copy;  2023 </p>
+	</div>
+</div>
+</body>
+</html>

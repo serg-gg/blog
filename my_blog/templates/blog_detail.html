@@ -1,0 +1,53 @@
+<!DOCTYPE>
+{% load static %}
+<html >
+<head>
+	<title>My blog</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+
+</head>
+<body>
+<div class="shell">
+	<div class="border">
+
+		<div id="navigation">
+			<ul>
+			    <li><a href="/" class="active">Home</a></li>
+			    <li><a href="/admin">Admin</a></li>
+
+			</ul>
+		</div>
+
+		<div id="main">
+			<div id="content" class="left">
+
+				<div class="projects">
+					<h3>{{ post.title }}</h3>
+                    <p align="center">
+                        <img src="{{ post.img.url }}" width="50%" />
+                    </p>
+					<div class="item">
+						<div class="text-center">
+							<p>{{ post.description }}</p>
+							<br>
+							<p>Author: {{ post.author }}</p>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+				</div>
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+
+
+	</div>
+
+	<div id="footer">
+		<p class="copy right">By Siarhei Burdzeika &copy;  2023 </p>
+	</div>
+</div>
+</body>
+</html>
