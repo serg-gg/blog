@@ -4,9 +4,8 @@ from .models import Post
 
 
 class PostView(View):
-
     def get(self, request):
-        posts = Post.objects.all()
+        posts = Post.objects.order_by('-date')
         return render(request, 'home.html', {'post_list': posts})
 
 

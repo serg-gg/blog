@@ -32,7 +32,9 @@
 					<br>
 					<div class="item">
 						<div class="text-center">
-							<p style="font-size: 16px; font-family:verdana">{{ post.description }}</p>
+							<p style="font-size: 16px; font-family:verdana">
+							{{ post.description|safe }}
+							</p>
 							<br>
 							<p>Author: {{ post.author }}</p>
 						</div>
