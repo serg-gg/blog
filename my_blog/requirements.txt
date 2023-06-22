@@ -4,6 +4,7 @@ charset-normalizer==2.0.11
 distlib==0.3.6
 Django==4.1.7
 filelock==3.10.7
+gunicorn==20.1.0
 idna==3.3
 mysql-connector-python==8.0.33
 Pillow==9.5.0
@@ -15,3 +16,4 @@ tzdata==2022.7
 urllib3==1.26.8
 virtualenv==20.21.0
 virtualenvwrapper-win==1.2.7
+psycopg2==2.8.6
