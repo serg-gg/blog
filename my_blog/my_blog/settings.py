@@ -26,7 +26,7 @@ with open(r'C:\Users\s_bur\PycharmProjects\my_blog\my_blog\my_blog\key.txt') as 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
